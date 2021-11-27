@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <div class="login-form bg-light mt-4 p-4">
+                <form #myForm="ngForm" (ngSubmit)="onFormSubmit(myForm)" class="row g-3">
+                    <h4>Registrar Usuario</h4>
+                    <div class="col-12">
+                        <label>Nombre de usuario</label>
+                        <input type="text" id="userName" class="form-control" placeholder="Nombre de usuario" required [(ngModel)]="usuario.userName" name="userName">
+                    </div>
+                    <div class="col-12">
+                        <label>Correo</label>
+                        <input type="mail" id="correo" class="form-control" placeholder="Contraseña" required [(ngModel)]="usuario.correo" name='correo'>
+                    </div>
+                    <div class="col-12">
+                        <label>Contraseña</label>
+                        <input type="password" id="password" class="form-control" placeholder="Contraseña" required [(ngModel)]="usuario.password" name='password'>
+                    </div>
+                    
+                    <div class="row justify-content-evenly mt-4">
+                        <div class="col-4">
+                            <button (click)=regresarInicio()   class="btn btn-warning float-end">Cancelar</button>
+                        </div>
+                        <div class="col-4">
+                            <button type="submit" class="btn btn-dark float-end">Registrar</button>
+                        </div>
+                      </div>
+                </form>
+                <hr class="mt-4">
+           
+            </div>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,17 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Descripcion</th>
+        <th scope="col">Direccion</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let centros of centro; index as i">
+            <td>{{centros.nombre}}</td>
+            <td>{{centros.descripcion}}</td>
+            <td>{{centros.direccion}}</td>
+            
+        </tr>
+    </tbody>
+  </table>
